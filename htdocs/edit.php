@@ -33,7 +33,14 @@
 </html>
 
 <?php
-$url = "localhost";
+//SQLの出力は未実装。とりあへず形だけ。
+
+//エラー出力強制
+ini_set( 'display_errors', 1 ); // エラーを画面に表示(1を0にすると画面上にはエラーは出ない)
+//すべてのエラー表示
+error_reporting( E_ALL );
+
+$url = "localhost:3306";
 $user = "root";
 $pass = "root";
 $db = "wysiwyg";
@@ -41,7 +48,6 @@ $db = "wysiwyg";
 if (!empty($_POST))
 {
     $value = htmlspecialchars( $_POST["editor1"] );
- 
     $link = mysql_connect( $url, $user, $pass ) or die("MySQLへの接続に失敗しました。");
     $sdb = mysql_select_db( $db, $link ) or die("データベースの選択に失敗しました。");
     $sql = "INSERT INTO `wysiwyg`.`posts` (`editor`) VALUES ('".$value."')";
