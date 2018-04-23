@@ -1,0 +1,11 @@
+・Editorの種類
+Article：wpみたいな記事入力形式
+Document：ドキュメント形式、多分いらない
+Inline：事前に決めた枠に従った入力（divで定義
+
+・Accessibility Checker
+アクセス最適化のためのチェックツール。あるとうざいかも。
+ガチ層向け。
+
+
+https://hijiriworld.com/web/wysiwyg-ckfinder/

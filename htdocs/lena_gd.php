@@ -1,5 +1,5 @@
 <?php
-
+//画像加工
 if ($_POST['submit']) {
 	
     if (is_uploaded_file($_FILES["up_img"]["tmp_name"])) {
