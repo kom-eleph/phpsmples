@@ -11,16 +11,14 @@
 -->
 </head>
 <body>
-<form action="" method="POST">
-<textarea name="message" id="editor"></textarea>
-</form>
+<div id="editor1" contenteditable="true">
+    <h1>Inline Editing in Action!</h1>
+    <p>The "div" element that contains this text is now editable.</p>
+</div>
 <script>
-  CKEDITOR.replace('editor', {
-	//エディタの細かい設定の指定
-	width:600
-
-  });
+    // Turn off automatic editor creation first.
+    CKEDITOR.disableAutoInline = true;
+    CKEDITOR.inline( 'editor1' );
 </script>
 </body>
 </html>
-
